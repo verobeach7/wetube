@@ -9,10 +9,11 @@ const CommentSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
-  video: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "Video",
-  },
+  // Comment에 관련된 video id를 기록하는 방법
+  //   video: {
+  //     type: mongoose.Schema.Types.ObjectId,
+  //     ref: "Video",
+  //   },
 });
 
 const model = mongoose.model("Comment", CommentSchema);
